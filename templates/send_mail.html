@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Mail</title>
+</head>
+<body>
+    <form action="{% url 'send_mail' %}" method="POST">
+        {% csrf_token %}
+        <!--Sender Email: <input type="text" name="sender" placeholder="Enter sender email address" required>
+        <br><br>-->
+        <!--Recipient Email: <input type="text" name="receiver" placeholder="client_email" required>-->
+        <br><br>
+        Subject: <input type="text" name="subject" placeholder="Enter mail subject here" required>
+        <br><br>
+        Body: <textarea rows="6" cols="80" name="message" required>Enter mail here...</textarea>
+        <br><br>
+        <button class="btn btn-primary mt-2" type="submit">Send</button>
+        <br><br>
+        
+</body>
+</html>
